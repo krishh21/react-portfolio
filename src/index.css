@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  100% {
+    transform: translateY(-100vh) translateX(20px);
+  }
+}
+
+.animate-float {
+  animation: float 12s linear infinite;
+}
+
+.bubble-0  { left: 10%; animation-delay: 0s; }
+.bubble-1  { left: 20%; animation-delay: 1s; }
+.bubble-2  { left: 30%; animation-delay: 2s; }
+.bubble-3  { left: 40%; animation-delay: 3s; }
+.bubble-4  { left: 50%; animation-delay: 4s; }
+.bubble-5  { left: 60%; animation-delay: 5s; }
+.bubble-6  { left: 70%; animation-delay: 6s; }
+.bubble-7  { left: 80%; animation-delay: 7s; }
+.bubble-8  { left: 90%; animation-delay: 8s; }
+.bubble-9  { left: 25%; animation-delay: 9s; }
+.bubble-10 { left: 15%; animation-delay: 10s; }
+.bubble-11 { left: 35%; animation-delay: 11s; }
+.bubble-12 { left: 45%; animation-delay: 12s; }
+.bubble-13 { left: 55%; animation-delay: 13s; }
+.bubble-14 { left: 65%; animation-delay: 14s; }
