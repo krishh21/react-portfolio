@@ -15,16 +15,16 @@ const Projects = () => {
       link: 'https://github.com/krishh21/weather-app',
     },
     {
-      title: 'AI Image Caption Generator',
+      title: 'AI Image Generator',
       description:
-        'Built an app that takes an image and generates meaningful captions using deep learning models.',
-      link: 'https://github.com/krishh21/Image_caption_generator',
+        'Built an app that takes an image and generates meaningful imgages using deep learning models.',
+      link: 'https://github.com/krishh21/AI-image-Genrator',
     },
     {
-      title: 'React Quiz App',
+      title: 'Portolio',
       description:
-        'Interactive quiz app with timer, progress bar, score calculation, feedback, and responsive UI.',
-      link: 'https://github.com/krishh21/Simple-Quiz-app',
+        'Made with attractive UI , Made onl using HTML , CSS & JavaScript.',
+      link: 'https://github.com/krishh21/my_portfolio',
     },
   ];
 
