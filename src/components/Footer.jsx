@@ -9,7 +9,7 @@ const Footer = () => {
         <a href="https://github.com/krishh21" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
         <a href="https://www.linkedin.com/in/krishna-yadav-27aa8026a" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
         <a href="https://www.instagram.com/_krishh_y/?igsh=eGpvcm5odGhxc2dy#" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-        <a href="https://x.com/krish24" target="_blank" rel="noopener noreferrer"><FaXTwitter /></a>
+        <a href="https://x.com/itskrish24" target="_blank" rel="noopener noreferrer"><FaXTwitter /></a>
       </div>
     </footer>
   );
