@@ -44,7 +44,7 @@ const Hero = () => {
 
         {/* ✅ Download CV under social links */}
         <a
-          href="https://drive.google.com/file/d/1oZlltLX6JOn_yc5e9P-lPpVnDoVVMM0v/view"
+          href="https://drive.google.com/file/d/1aZ2Y3E0hU2VfjSqiRA7kTyXrq0TBQGmN/view?usp=drivesdk"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-6 inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-all duration-300 animate-fadeInUp"
