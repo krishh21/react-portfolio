@@ -34,7 +34,7 @@ const Hero = () => {
           <a href="https://www.instagram.com/_krishh_y/?igsh=eGpvcm5odGhxc2dy#" target="_blank" rel="noopener noreferrer">
             <FaInstagram size={30} />
           </a>
-          <a href="https://x.com/itskrish24" target="_blank" rel="noopener noreferrer">
+          <a href="https://x.com/_krishh_y" target="_blank" rel="noopener noreferrer">
             <FaXTwitter size={30} />
           </a>
           <a href="mailto:krishna1052004@gmail.com">
