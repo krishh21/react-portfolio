@@ -1,21 +1,41 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
   const form = useRef();
-  const [sent, setSent] = useState(false);
+  const timeoutRef = useRef(null);
+  const [notification, setNotification] = useState(null);
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
+
+  const showNotification = (message, type = 'success') => {
+    setNotification({ message, type });
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    timeoutRef.current = setTimeout(() => {
+      setNotification(null);
+    }, 4000);
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm('service_2tyw4tc', 'template_fekihbi', form.current, 'j0p2oAyH7gU3opyKv')
+      .sendForm('service_2tyw4tc', 'template_fekihbi', form.current, 'UN8JsvuipsEzwuf8R')
       .then(
         () => {
-          setSent(true);
+          showNotification('Message sent successfully!', 'success');
           form.current.reset();
         },
         (error) => {
           console.error('FAILED...', error.text);
+          showNotification('Failed to send message. Please try again.', 'error');
         }
       );
   };
@@ -58,10 +78,15 @@ const ContactForm = () => {
             Send Message
           </button>
         </form>
-        {sent && <p className="text-green-500 mt-4 animate-fade-in">Message sent successfully!</p>}
+
+        {notification && (
+          <div className={`mt-4 inline-flex items-center rounded-md px-4 py-3 text-sm shadow-lg transition-transform duration-300 ${notification.type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+            {notification.message}
+          </div>
+        )}
 
         <a
-          href="https://drive.google.com/file/d/1aZ2Y3E0hU2VfjSqiRA7kTyXrq0TBQGmN/view?usp=drivesdk"
+          href="https://docs.google.com/document/d/1JhXnNxdn90lZ6Gs5b8K9R6e4cvvjoDOl/edit?usp=sharing&ouid=113692859891769661336&rtpof=true&sd=true"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block mt-8 text-blue-600 hover:underline hover:scale-105 transition-transform"

@@ -20,7 +20,7 @@ import ParticlesBackground from './components/ParticlesBackground';
 
 function App() {
   return (
-    <main className="bg-white dark:bg-gray-950 text-black dark:text-white font-sans">
+    <main className="relative min-h-screen overflow-x-hidden bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.13),_transparent_30%),linear-gradient(135deg,_#ffffff_0%,_#f8fbff_100%)] text-black transition-colors duration-300 dark:bg-[radial-gradient(circle_at_top_left,_rgba(59,130,246,0.18),_transparent_25%),linear-gradient(135deg,_#020617_0%,_#0f172a_100%)] dark:text-white font-sans">
       <Hero />
       <About />
       <Education />
@@ -28,12 +28,12 @@ function App() {
       <Navbar />
       <Skills />
       <FloatingBubbles />
-    <CustomCursor />
+      <CustomCursor />
       <Projects />
       <ContactForm />
       <Footer />
       <ScrollToTop />
-       <ParticlesBackground />
+      <ParticlesBackground />
     </main>
   );
 }

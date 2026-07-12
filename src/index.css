@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Smooth scroll */
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
 @keyframes float {

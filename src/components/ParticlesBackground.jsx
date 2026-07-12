@@ -1,35 +1,12 @@
 import React from 'react';
-import Particles from 'react-tsparticles';
-import { loadFull } from 'tsparticles';
 
 const ParticlesBackground = () => {
-  const particlesInit = async (main) => {
-    await loadFull(main);
-  };
-
   return (
-    <Particles
-      id="tsparticles"
-      init={particlesInit}
-      options={{
-        fullScreen: { enable: false },
-        background: { color: { value: 'transparent' } },
-        particles: {
-          number: { value: 60, density: { enable: true, value_area: 800 } },
-          color: { value: '#60a5fa' },
-          shape: { type: 'circle' },
-          opacity: { value: 0.2 },
-          size: { value: 3 },
-          move: {
-            enable: true,
-            speed: 1,
-            direction: 'none',
-            outModes: { default: 'out' },
-          },
-        },
-      }}
-      className="absolute top-0 left-0 w-full h-full z-[-1]"
-    />
+    <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+      <div className="absolute left-[-10%] top-0 h-72 w-72 rounded-full bg-blue-400/20 blur-3xl" />
+      <div className="absolute right-[-8%] top-20 h-80 w-80 rounded-full bg-sky-300/20 blur-3xl" />
+      <div className="absolute bottom-0 left-1/3 h-64 w-64 rounded-full bg-indigo-300/20 blur-3xl" />
+    </div>
   );
 };
 
